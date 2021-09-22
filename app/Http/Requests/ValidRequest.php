@@ -24,7 +24,7 @@ class ValidRequest extends FormRequest
     public function rules()
     {
         return [
-        'filename'=>'required|mimes:xml',
+        'filename'=>'required|mimes:docx',
         'lesson'=>'required'
         ];
     }

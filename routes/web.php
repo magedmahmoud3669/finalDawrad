@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// })->middleware('auth');
 
  
 // Route::get('/section', '\App\Http\Controllers\SectionController@tester');
@@ -23,12 +23,13 @@ Route::get('/', function () {
 
 // Route::get('/style', '\App\Http\Controllers\copyController@style');
 // Route::get('/sector', '\App\Http\Controllers\SectorController@tester');
-Route::get('/page', '\App\Http\Controllers\InterFaceController@userinterface')->name('page');
+Route::get('/', '\App\Http\Controllers\InterFaceController@userinterface');
  
- Route::post('/convert', '\App\Http\Controllers\InterFaceController@rabie')->name('convert');
+ Route::post('/convert', '\App\Http\Controllers\testerrrController@rabie')->name('convert')->middleware('auth');
 
 
  Route::get('/new', '\App\Http\Controllers\RabieController@tester');
+ Auth::routes();
 
 
 
@@ -37,6 +38,6 @@ Route::get('/page', '\App\Http\Controllers\InterFaceController@userinterface')->
 
 
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
