@@ -25,10 +25,10 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/sector', '\App\Http\Controllers\SectorController@tester');
 Route::get('/', '\App\Http\Controllers\InterFaceController@userinterface');
  
- Route::post('/convert', '\App\Http\Controllers\testerrrController@rabie')->name('convert')->middleware('auth');
+ Route::post('/convert', '\App\Http\Controllers\DwradController@rabie')->name('convert')->middleware('auth');
 
 
- Route::get('/new', '\App\Http\Controllers\RabieController@tester');
+ //Route::get('/new', '\App\Http\Controllers\RabieController@tester');
  Auth::routes();
 
 
